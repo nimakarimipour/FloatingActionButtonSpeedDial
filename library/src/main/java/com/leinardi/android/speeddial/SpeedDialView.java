@@ -67,8 +67,8 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
     private List<FabWithLabelView> mFabWithLabelViews = new ArrayList<>();
     private FloatingActionButton mMainFab;
     private boolean mIsOpen = false;
-    private Drawable mMainFabOpenDrawable = null;
-    private Drawable mMainFabCloseDrawable = null;
+    @Nullable private Drawable mMainFabOpenDrawable = null;
+    @Nullable private Drawable mMainFabCloseDrawable = null;
     @Nullable
     private SpeedDialOverlayLayout mOverlayLayout;
     @ExpansionMode
@@ -435,7 +435,7 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
     }
 
     @Nullable
-    private SpeedDialActionItem removeActionItem(FabWithLabelView view,
+    private SpeedDialActionItem removeActionItem(@Nullable FabWithLabelView view,
                                                  @Nullable Iterator<FabWithLabelView> it,
                                                  boolean animate) {
         if (view != null) {
@@ -464,11 +464,11 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
         }
     }
 
-    private SpeedDialActionItem removeActionItem(FabWithLabelView view) {
+    @Nullable private SpeedDialActionItem removeActionItem(@Nullable FabWithLabelView view) {
         return removeActionItem(view, null, true);
     }
 
-    private void init(Context context, AttributeSet attrs) {
+    private void init(Context context, @Nullable AttributeSet attrs) {
         mMainFab = createMainFab();
         addView(mMainFab);
         setClipChildren(false);
@@ -690,8 +690,8 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
     public static class SnackbarBehavior extends CoordinatorLayout.Behavior<View> {
         private static final boolean AUTO_HIDE_DEFAULT = true;
 
-        private Rect mTmpRect;
-        private OnVisibilityChangedListener mInternalAutoHideListener;
+        @Nullable private Rect mTmpRect;
+        @Nullable private OnVisibilityChangedListener mInternalAutoHideListener;
         private boolean mAutoHideEnabled;
 
         public SnackbarBehavior() {
