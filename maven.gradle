@@ -17,7 +17,7 @@
 def isMavenAvailable = false
 try {
     "mvn -version".execute().waitFor() // Check if Maven binary is available
-    isMavenAvailable = true
+    isMavenAvailable = false
 } catch (IOException ignore) {
     logger.warn("Maven binary not available, pubishing to Bintray not possible.")
 }
