@@ -194,8 +194,8 @@ public class UiUtils {
     /**
      * Creates a {@link Bitmap} from a {@link Drawable}.
      */
-    @Nullable
-    public static Bitmap getBitmapFromDrawable(@Nullable Drawable drawable) {
+    
+    @Nullable public static Bitmap getBitmapFromDrawable( @Nullable Drawable drawable) {
         if (drawable == null) {
             return null;
         } else {
@@ -225,8 +225,8 @@ public class UiUtils {
     /**
      * Creates a {@link Drawable} from a {@link Bitmap}.
      */
-    @Nullable
-    public static Drawable getDrawableFromBitmap(@Nullable Bitmap bitmap) {
+    
+    @Nullable public static Drawable getDrawableFromBitmap( Bitmap bitmap) {
         if (bitmap == null) {
             return null;
         } else {
