@@ -48,13 +48,16 @@ import static com.leinardi.android.speeddial.SpeedDialActionItem.NOT_SET;
  */
 @SuppressWarnings({"unused", "WeakerAccess"})
 final class FabWithLabelView extends LinearLayout {
+
     private static final String TAG = FabWithLabelView.class.getSimpleName();
 
     private TextView mLabelTextView;
     private FloatingActionButton mFab;
     private CardView mLabelCardView;
     private boolean mIsLabelEnable;
+    @Nullable
     private SpeedDialActionItem mSpeedDialActionItem;
+    @Nullable
     private OnActionSelectedListener mOnActionSelectedListener;
     @FloatingActionButton.Size
     private int mCurrentFabSize;
@@ -64,7 +67,7 @@ final class FabWithLabelView extends LinearLayout {
         init(context, null);
     }
 
-    public FabWithLabelView(Context context, AttributeSet attrs) {
+    public FabWithLabelView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
@@ -123,6 +126,7 @@ final class FabWithLabelView extends LinearLayout {
         return mFab;
     }
 
+    @Nullable
     public SpeedDialActionItem getSpeedDialActionItem() {
         return mSpeedDialActionItem;
     }
@@ -131,7 +135,8 @@ final class FabWithLabelView extends LinearLayout {
         mSpeedDialActionItem = actionItem;
         setId(actionItem.getId());
         setLabel(actionItem.getLabel());
-        setLabelClickable(getSpeedDialActionItem().isLabelClickable());
+        SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
+        setLabelClickable(speedDialActionItem != null && speedDialActionItem.isLabelClickable());
 
         int iconTintColor = actionItem.getFabImageTintColor();
 
@@ -179,14 +184,22 @@ final class FabWithLabelView extends LinearLayout {
             getFab().setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mOnActionSelectedListener.onActionSelected(getSpeedDialActionItem());
+                    SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
+                    if (mOnActionSelectedListener != null
+                            && speedDialActionItem != null) {
+                        mOnActionSelectedListener.onActionSelected(speedDialActionItem);
+                    }
                 }
             });
             getLabelBackground().setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (getSpeedDialActionItem().isLabelClickable() && isLabelEnable()) {
-                        mOnActionSelectedListener.onActionSelected(getSpeedDialActionItem());
+                    SpeedDialActionItem speedDialActionItem = getSpeedDialActionItem();
+                    if (mOnActionSelectedListener != null
+                            && speedDialActionItem != null
+                            && speedDialActionItem.isLabelClickable()
+                            && isLabelEnable()) {
+                        mOnActionSelectedListener.onActionSelected(speedDialActionItem);
                     }
                 }
             });
@@ -194,6 +207,7 @@ final class FabWithLabelView extends LinearLayout {
             getFab().setOnClickListener(null);
             getLabelBackground().setOnClickListener(null);
         }
+
     }
 
     /**
