@@ -31,17 +31,17 @@ import android.support.v7.content.res.AppCompatResources;
 
 import static android.support.design.widget.FloatingActionButton.SIZE_AUTO;
 
-@SuppressWarnings({"unused", "WeakerAccess"})
+
 public class SpeedDialActionItem implements Parcelable {
     public static final int NOT_SET = Integer.MIN_VALUE;
     @IdRes
     private final int mId;
-    @Nullable
-    private final String mLabel;
+    
+    @Nullable private final String mLabel;
     @DrawableRes
     private final int mFabImageResource;
-    @Nullable
-    private final Drawable mFabImageDrawable;
+    
+    @Nullable private final Drawable mFabImageDrawable;
     @ColorInt
     private final int mFabImageTintColor;
     @ColorInt
@@ -74,8 +74,8 @@ public class SpeedDialActionItem implements Parcelable {
         return mId;
     }
 
-    @Nullable
-    public String getLabel() {
+    
+    @Nullable public String getLabel() {
         return mLabel;
     }
 
@@ -85,8 +85,8 @@ public class SpeedDialActionItem implements Parcelable {
      * @param context A context to retrieve the Drawable from (needed for SpeedDialActionItem.Builder(int, int).
      * @return the speed dial item drawable, or null if no drawable has been assigned.
      */
-    @Nullable
-    public Drawable getFabImageDrawable(Context context) {
+    
+    @Nullable public Drawable getFabImageDrawable(Context context) {
         if (mFabImageDrawable != null) {
             return mFabImageDrawable;
         } else if (mFabImageResource != NOT_SET) {
@@ -135,12 +135,12 @@ public class SpeedDialActionItem implements Parcelable {
         private final int mId;
         @DrawableRes
         private final int mFabImageResource;
-        @Nullable
-        private Drawable mFabImageDrawable;
+        
+        @Nullable private Drawable mFabImageDrawable;
         @ColorInt
         private int mFabImageTintColor = NOT_SET;
-        @Nullable
-        private String mLabel;
+        
+        @Nullable private String mLabel;
         @ColorInt
         private int mFabBackgroundColor = NOT_SET;
         @ColorInt
@@ -175,13 +175,13 @@ public class SpeedDialActionItem implements Parcelable {
          *                 of {@link SpeedDialView}. The identifier should be a positive number.
          * @param drawable the Drawable to set, or null to clear the content
          */
-        public Builder(@IdRes int id, @Nullable Drawable drawable) {
+        public Builder(@IdRes int id,  Drawable drawable) {
             mId = id;
             mFabImageDrawable = drawable;
             mFabImageResource = NOT_SET;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder setLabel( String label) {
             mLabel = label;
             return this;
         }
