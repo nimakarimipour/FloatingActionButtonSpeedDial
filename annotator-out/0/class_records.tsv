@@ -1,8 +1,4 @@
 class	path
-com.leinardi.android.speeddial.UiUtils	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
-com.leinardi.android.speeddial.UiUtils$1	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
-com.leinardi.android.speeddial.UiUtils$2	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
-com.leinardi.android.speeddial.UiUtils$3	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
 com.leinardi.android.speeddial.SpeedDialActionItem	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java
 com.leinardi.android.speeddial.SpeedDialActionItem$Builder	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java
 com.leinardi.android.speeddial.SpeedDialActionItem$1	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialActionItem.java
@@ -20,5 +16,9 @@ com.leinardi.android.speeddial.FabWithLabelView	/Users/nima/Developer/null-repai
 com.leinardi.android.speeddial.FabWithLabelView$1	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java
 com.leinardi.android.speeddial.FabWithLabelView$2	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java
 com.leinardi.android.speeddial.SpeedDialOverlayLayout	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java
+com.leinardi.android.speeddial.UiUtils	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
+com.leinardi.android.speeddial.UiUtils$1	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
+com.leinardi.android.speeddial.UiUtils$2	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
+com.leinardi.android.speeddial.UiUtils$3	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/UiUtils.java
 com.leinardi.android.speeddial.ViewGroupUtils	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/ViewGroupUtils.java
 com.leinardi.android.speeddial.BuildConfig	/Users/nima/Developer/null-repair-auto/projects/FloatingActionButtonSpeedDial/library/build/generated/source/buildConfig/debug/com/leinardi/android/speeddial/BuildConfig.java

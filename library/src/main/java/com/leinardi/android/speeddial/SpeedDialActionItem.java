@@ -36,7 +36,7 @@ public class SpeedDialActionItem implements Parcelable {
     public static final int NOT_SET = Integer.MIN_VALUE;
     @IdRes
     private final int mId;
-    private final String mLabel;
+    @Nullable private final String mLabel;
     @DrawableRes
     private final int mFabImageResource;
     @Nullable
@@ -73,7 +73,7 @@ public class SpeedDialActionItem implements Parcelable {
         return mId;
     }
 
-    public String getLabel() {
+    @Nullable public String getLabel() {
         return mLabel;
     }
 
@@ -137,7 +137,7 @@ public class SpeedDialActionItem implements Parcelable {
         private Drawable mFabImageDrawable;
         @ColorInt
         private int mFabImageTintColor = NOT_SET;
-        private String mLabel;
+        @Nullable private String mLabel;
         @ColorInt
         private int mFabBackgroundColor = NOT_SET;
         @ColorInt
