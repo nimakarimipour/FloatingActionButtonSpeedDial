@@ -214,6 +214,7 @@ static def addRepos(RepositoryHandler handler) {
     handler.mavenCentral()
     handler.maven { url "https://plugins.gradle.org/m2/" }
     handler.maven { url 'https://dl.bintray.com/leinardi/android' }
+    handler.maven { url 'https://nexus.web.cern.ch/nexus/content/repositories/public/'}
 }
 
 ext.addRepos = this.&addRepos
