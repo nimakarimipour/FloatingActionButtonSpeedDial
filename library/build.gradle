@@ -58,6 +58,7 @@ tasks.withType(JavaCompile) {
     if (!name.toLowerCase().contains("test")) {
         println(scanner_config)
         println(nullaway_config)
+        options.errorprone.disableAllChecks = true
         options.errorprone {
             check("NullAway", CheckSeverity.ERROR)
             check("AnnotatorScanner", CheckSeverity.ERROR)
