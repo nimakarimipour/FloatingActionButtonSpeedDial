@@ -202,6 +202,7 @@ final class FabWithLabelView extends LinearLayout {
      * @param context context.
      * @param attrs   attributes.
      */
+    @com.uber.nullaway.annotations.Initializer
     private void init(Context context, @Nullable AttributeSet attrs) {
         View rootView = inflate(context, R.layout.sd_fab_with_label_view, this);
 
