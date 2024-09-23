@@ -251,6 +251,7 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
      * @param position the index of the {@link SpeedDialActionItem} to be removed
      * @return the {@link SpeedDialActionItem} that was removed from the list
      */
+    @Nullable
     public SpeedDialActionItem removeActionItem(int position) {
         SpeedDialActionItem speedDialActionItem = mFabWithLabelViews.get(position).getSpeedDialActionItem();
         removeActionItem(speedDialActionItem);
@@ -267,8 +268,8 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
      * @param actionItem {@link SpeedDialActionItem} to be removed from this list, if present
      * @return true if this list contained the specified element
      */
-    public boolean removeActionItem(SpeedDialActionItem actionItem) {
-        return removeActionItemById(actionItem.getId()) != null;
+    public boolean removeActionItem(@Nullable SpeedDialActionItem actionItem) {
+        return actionItem != null && removeActionItemById(actionItem.getId()) != null;
     }
 
     /**
@@ -303,8 +304,11 @@ public class SpeedDialView extends LinearLayout implements CoordinatorLayout.Att
      * @param newSpeedDialActionItem the new {@link SpeedDialActionItem} to add
      * @return true if this list contained the specified element
      */
-    public boolean replaceActionItem(SpeedDialActionItem oldSpeedDialActionItem, SpeedDialActionItem
+    public boolean replaceActionItem(@Nullable SpeedDialActionItem oldSpeedDialActionItem, SpeedDialActionItem
             newSpeedDialActionItem) {
+        if (oldSpeedDialActionItem == null) {
+            return false;
+        }
         FabWithLabelView oldView = findFabWithLabelViewById(oldSpeedDialActionItem.getId());
         if (oldView != null) {
             int index = mFabWithLabelViews.indexOf(oldView);
